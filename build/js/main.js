@@ -33,7 +33,7 @@ class MainPage {
 	}
 
 	getUserCoords() {
-		return fetch('https://api.userinfo.io/userinfos').then(function (req) {
+		return fetch('https://cors-anywhere.herokuapp.com/https://api.userinfo.io/userinfos').then(function (req) {
 			return req.json();
 		}).then(function (data) {
 			var coords = data.position.latitude.toFixed(6) + ',' + data.position.longitude.toFixed(6);
@@ -316,8 +316,8 @@ class WeatherPage {
 	}
 
 	xhrWeather() {
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://api.darksky.net/forecast/14b2f0cd9db914c3bbf4ab5e43ac514d/' + this.coords, true);
+		var xhr = new XMLHttpRequest();a2caec8d8c72392579ff9100b6cde922
+		xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast//' + this.coords, true);
 		xhr.responseType = 'json';
 		xhr.send();
 
@@ -333,7 +333,7 @@ class WeatherPage {
 	}
 
 	fetchWeather() {
-		return fetch('https://api.darksky.net/forecast/14b2f0cd9db914c3bbf4ab5e43ac514d/' + this.coords).then(function (req) {
+		return fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/a2caec8d8c72392579ff9100b6cde922/' + this.coords).then(function (req) {
 			return req.json();
 		}).then(function (data) {
 			this.writeWeatherDetails(data);
