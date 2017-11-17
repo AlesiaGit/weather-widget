@@ -1,4 +1,4 @@
-class weatherPage {
+class WeatherPage {
 
 	constructor (coords) {
 

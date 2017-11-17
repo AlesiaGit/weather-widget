@@ -1,4 +1,4 @@
-class aboutPage {
+class AboutPage {
 
 	constructor() {
 		document.getElementById('widget').innerHTML = '<div class="header">\
@@ -9,7 +9,7 @@ class aboutPage {
 			</div>\
 		</div>\
 		<div class="body">\
-			<img class="avatar" src="../img/avatar.png"/>\
+			<img class="avatar" src="/img/avatar.png"/>\
 			<h1>Lorem ipsum</h1>\
 			<p class="sample-text">Lorem ipsum dolor sit amet, no nam novum primis dictas.\
 			In democritum contentiones signiferumque mea, in quo meliore reprehendunt. Ea ius nibh doctus placerat, \
@@ -27,7 +27,7 @@ class aboutPage {
 	}
 
 }
-class mainPage {
+class MainPage {
 	constructor() {
 		this.getUserCoords();
 	}
@@ -39,7 +39,7 @@ class mainPage {
 			var coords = data.position.latitude.toFixed(6) + ',' + data.position.longitude.toFixed(6);
 
 			window.location.hash = "#city=" + coords;
-			new weatherPage(coords);
+			new WeatherPage(coords);
 		});
 	}
 }
@@ -89,7 +89,7 @@ Router.prototype = {
 	}
 };
 
-class weatherPage {
+class WeatherPage {
 
 	constructor(coords) {
 
