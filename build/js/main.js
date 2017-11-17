@@ -308,7 +308,7 @@ class WeatherPage {
 	}
 
 	getWeather() {
-		if (document.getElementById('xhr').checked) {
+		if (document.getElementById('xhr').checked === true) {
 			this.xhrWeather();
 		} else {
 			this.fetchWeather();
