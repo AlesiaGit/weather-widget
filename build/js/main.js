@@ -198,7 +198,7 @@ class WeatherPage {
 				this.processFavoritesInput();
 			}.bind(this));
 
-			map.addListener('mouseup', function (event) {
+			map.addListener('dragend', function (event) {
 				map.getCenter();
 				this.coords = map.getCenter().lat().toFixed(6) + ',' + map.getCenter().lng().toFixed(6);
 				this.getWeather();
